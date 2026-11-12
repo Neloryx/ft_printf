@@ -86,5 +86,18 @@ int	main(void)
 	/* test NULL */
 	printf(NULL);
 	ft_printf(NULL);
+
+	/* test stdout closed */
+	close(1);
+	
+	errno = 0;
+	ret1 = printf("printf    : %d\n", 42);
+	int errno_ret1 = errno;
+	ret2 = ft_printf("printf    : %d\n", 42);
+	int errno_ret2 = errno;
+
+	fprintf(stderr, "printf    : ret = %d, errno = %d\n", ret1, errno_ret1);
+	fprintf(stderr, "ft_printf    : ret = %d, errno = %d\n", ret2, errno_ret2);
+	
 	return (0);
 }
