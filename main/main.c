@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <limits.h>
+#include <errno.h>
 #include "../ft_printf.h"
  
 int	main(void)
