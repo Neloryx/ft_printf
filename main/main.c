@@ -85,8 +85,8 @@ int	main(void)
 	ft_printf("ft_printf : [%]");
 
 	/* test NULL */
-	printf(NULL);
-	ft_printf(NULL);
+	printf("%d", printf(NULL));
+	printf("%d", ft_printf(NULL));
 
 	/* test stdout closed */
 	close(1);
