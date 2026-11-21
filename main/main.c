@@ -80,6 +80,11 @@ int	main(void)
 	ret1 = printf("printf    : %c %s %d %u %x %X %%\n", 'z', "mix", -1, 1, 255, 255);
 	ret2 = ft_printf("ft_printf : %c %s %d %u %x %X %%\n", 'z', "mix", -1, 1, 255, 255);
 	printf("ret: %d | %d\n\n", ret1, ret2);
+
+	/* test emoji */
+	ret1 = printf("printf    : 🙂\n");
+	ret2 = ft_printf("ft_printf : 🙂\n");
+	printf("ret: %d | %d\n\n", ret1, ret2);
  
 	/* test [%] */
 	ft_printf("ft_printf : [%]");
